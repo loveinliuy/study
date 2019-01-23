@@ -11,13 +11,16 @@
     <modules>
         <module>study-proxy</module>
         <module>study-common</module>
+        <module>study-simple-rpc-framework</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
         <!-- compile -->
+        <commons-lang3.version>3.8.1</commons-lang3.version>
         <javassist.version>3.22.0-GA</javassist.version>
         <log4j2.version>2.11.1</log4j2.version>
+        <lombok.version>1.18.4</lombok.version>
         <!-- test -->
         <junit.version>4.12</junit.version>
     </properties>
@@ -34,7 +37,17 @@
                 <artifactId>study-proxy</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-simple-rpc-framework</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
@@ -65,6 +78,11 @@
                 <artifactId>javassist</artifactId>
                 <version>${javassist.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>junit</groupId>
@@ -77,25 +95,10 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
+            <groupId>shibo.study</groupId>
+            <artifactId>study-common</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-jul</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-jcl</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

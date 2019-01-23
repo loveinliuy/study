@@ -19,7 +19,11 @@ public final class ClassUtils {
      * @return 这个类实现的所有接口
      */
     public static List<Class<?>> getAllInterfaces(Class<?> targetClass) {
-        return Arrays.stream(targetClass.getInterfaces()).collect(Collectors.toList());
+        List<Class<?>> allInterfaces = Arrays.stream(targetClass.getInterfaces()).collect(Collectors.toList());
+        if (targetClass.isInterface()) {
+            allInterfaces.add(targetClass);
+        }
+        return allInterfaces;
     }
 
 }
