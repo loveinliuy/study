@@ -12,15 +12,20 @@
         <module>study-proxy</module>
         <module>study-common</module>
         <module>study-simple-rpc-framework</module>
+        <module>study-serialization</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
+        <build.encoding>UTF-8</build.encoding>
         <!-- compile -->
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <javassist.version>3.22.0-GA</javassist.version>
         <log4j2.version>2.11.1</log4j2.version>
         <lombok.version>1.18.4</lombok.version>
+        <objenesis.version>2.6</objenesis.version>
+        <protostuff.version>1.5.9</protostuff.version>
+        <fastjson.version>1.2.51</fastjson.version>
         <!-- test -->
         <junit.version>4.12</junit.version>
     </properties>
@@ -35,6 +40,11 @@
             <dependency>
                 <groupId>shibo.study</groupId>
                 <artifactId>study-proxy</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-serialization</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -79,6 +89,26 @@
                 <version>${javassist.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.protostuff</groupId>
+                <artifactId>protostuff-core</artifactId>
+                <version>${protostuff.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.protostuff</groupId>
+                <artifactId>protostuff-runtime</artifactId>
+                <version>${protostuff.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.objenesis</groupId>
+                <artifactId>objenesis</artifactId>
+                <version>${objenesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
@@ -95,8 +125,32 @@
 
     <dependencies>
         <dependency>
-            <groupId>shibo.study</groupId>
-            <artifactId>study-common</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jul</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jcl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
         <dependency>
@@ -112,6 +166,10 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.0</version>
                 </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -120,6 +178,13 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <encoding>${build.encoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>${build.encoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>

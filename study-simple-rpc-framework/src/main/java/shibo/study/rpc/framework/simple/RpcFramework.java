@@ -78,7 +78,7 @@ public class RpcFramework {
             throw new IllegalArgumentException("Host must not be empty!");
         }
         log.info("Preparing to get remote service {} from server {}:{}", interfaceClass.getName(), host, port);
-        return ProxyFactoryManager.defaultProxyFactory().getInterfaceProxy(interfaceClass, (proxy, method, args) -> {
+        return ProxyFactoryManager.defaultProxyFactory().getProxy(interfaceClass, (proxy, method, args) -> {
             try (Socket socket = new Socket(host, port)) {
                 try (ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
                      ObjectInputStream input = new ObjectInputStream(socket.getInputStream())) {

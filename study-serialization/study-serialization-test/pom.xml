@@ -3,23 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>study-parent</artifactId>
+        <artifactId>study-serialization</artifactId>
         <groupId>shibo.study</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>study-simple-rpc-framework</artifactId>
-
+    <artifactId>study-serialization-test</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>shibo.study</groupId>
-            <artifactId>study-common</artifactId>
+            <artifactId>study-serialization-api</artifactId>
         </dependency>
         <dependency>
             <groupId>shibo.study</groupId>
-            <artifactId>study-proxy</artifactId>
+            <artifactId>study-serialization-jdk</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>shibo.study</groupId>
+            <artifactId>study-serialization-protostuff</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>shibo.study</groupId>
+            <artifactId>study-serialization-fastjson</artifactId>
         </dependency>
     </dependencies>
+
 </project>
