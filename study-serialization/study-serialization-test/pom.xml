@@ -28,6 +28,18 @@
             <groupId>shibo.study</groupId>
             <artifactId>study-serialization-fastjson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>shibo.study</groupId>
+            <artifactId>study-serialization-hessian2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>shibo.study</groupId>
+            <artifactId>study-serialization-fst</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>shibo.study</groupId>
+            <artifactId>study-serialization-kryo</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

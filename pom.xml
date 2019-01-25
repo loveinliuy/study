@@ -20,7 +20,10 @@
         <build.encoding>UTF-8</build.encoding>
         <!-- compile -->
         <commons-lang3.version>3.8.1</commons-lang3.version>
+        <fst.version>2.56</fst.version>
+        <hessian.version>4.0.38</hessian.version>
         <javassist.version>3.22.0-GA</javassist.version>
+        <kryo.version>4.0.2</kryo.version>
         <log4j2.version>2.11.1</log4j2.version>
         <lombok.version>1.18.4</lombok.version>
         <objenesis.version>2.6</objenesis.version>
@@ -107,6 +110,21 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.caucho</groupId>
+                <artifactId>hessian</artifactId>
+                <version>${hessian.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.ruedigermoeller</groupId>
+                <artifactId>fst</artifactId>
+                <version>${fst.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.esotericsoftware</groupId>
+                <artifactId>kryo</artifactId>
+                <version>${kryo.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>

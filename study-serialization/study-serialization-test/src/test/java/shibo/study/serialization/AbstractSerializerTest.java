@@ -23,7 +23,7 @@ public abstract class AbstractSerializerTest {
 
     private Logger logger = LogManager.getLogger();
 
-    protected Serializer serializer;
+    Serializer serializer;
 
 
     @Before

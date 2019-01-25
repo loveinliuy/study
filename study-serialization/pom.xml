@@ -17,6 +17,9 @@
         <module>study-serialization-test</module>
         <module>study-serialization-protostuff</module>
         <module>study-serialization-fastjson</module>
+        <module>study-serialization-hessian2</module>
+        <module>study-serialization-fst</module>
+        <module>study-serialization-kryo</module>
     </modules>
 
     <dependencyManagement>
@@ -39,6 +42,21 @@
             <dependency>
                 <groupId>shibo.study</groupId>
                 <artifactId>study-serialization-fastjson</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-serialization-hessian2</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-serialization-fst</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-serialization-kryo</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
