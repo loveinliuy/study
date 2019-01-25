@@ -41,6 +41,7 @@ public abstract class AbstractKryoFactory implements KryoFactory {
         this.registrationRequired = registrationRequired;
     }
 
+    @Override
     public Kryo create() {
         if (!kryoCreated) {
             kryoCreated = true;
@@ -80,7 +81,17 @@ public abstract class AbstractKryoFactory implements KryoFactory {
         kryo.register(double[].class);
     }
 
+    /**
+     * 从工厂中获取一个kryo对象
+     *
+     * @return kryo
+     */
     public abstract Kryo getKryo();
 
+    /**
+     * 将使用完成的kryo对象归还
+     *
+     * @param kryo kryo
+     */
     public abstract void returnKryo(Kryo kryo);
 }
