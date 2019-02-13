@@ -13,6 +13,7 @@
         <module>study-common</module>
         <module>study-simple-rpc-framework</module>
         <module>study-serialization</module>
+        <module>study-netty</module>
     </modules>
 
     <properties>
@@ -20,15 +21,16 @@
         <build.encoding>UTF-8</build.encoding>
         <!-- compile -->
         <commons-lang3.version>3.8.1</commons-lang3.version>
+        <fastjson.version>1.2.51</fastjson.version>
         <fst.version>2.56</fst.version>
         <hessian.version>4.0.38</hessian.version>
         <javassist.version>3.22.0-GA</javassist.version>
         <kryo.version>4.0.2</kryo.version>
         <log4j2.version>2.11.1</log4j2.version>
         <lombok.version>1.18.4</lombok.version>
+        <netty.version>4.1.31.Final</netty.version>
         <objenesis.version>2.6</objenesis.version>
         <protostuff.version>1.5.9</protostuff.version>
-        <fastjson.version>1.2.51</fastjson.version>
         <!-- test -->
         <junit.version>4.12</junit.version>
     </properties>
@@ -130,6 +132,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
             </dependency>
 
             <dependency>
