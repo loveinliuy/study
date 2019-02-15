@@ -16,9 +16,17 @@
         <module>study-netty-websocket</module>
         <module>study-netty-websocket-chat</module>
         <module>study-netty-spdy</module>
+        <module>study-netty-udp</module>
     </modules>
 
     <dependencyManagement>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>shibo.study</groupId>
+            <artifactId>study-common</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
