@@ -1,4 +1,4 @@
-package shibo.study.rpc.framework.simple;
+package shibo.study.rpc.simple;
 
 /**
  * @author zhangshibo

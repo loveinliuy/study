@@ -1,4 +1,4 @@
-package shibo.study.rpc.framework.simple;
+package shibo.study.rpc.simple;
 
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;

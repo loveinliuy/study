@@ -11,9 +11,9 @@
     <modules>
         <module>study-proxy</module>
         <module>study-common</module>
-        <module>study-simple-rpc-framework</module>
         <module>study-serialization</module>
         <module>study-netty</module>
+        <module>study-rpc</module>
     </modules>
 
     <properties>
