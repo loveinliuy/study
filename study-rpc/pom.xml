@@ -15,7 +15,25 @@
         <module>study-rpc-simple</module>
         <module>study-rpc-test</module>
         <module>study-rpc-api</module>
+        <module>study-rpc-netty</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-rpc-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-serialization</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
