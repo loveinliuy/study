@@ -17,6 +17,8 @@
         <module>study-netty-websocket-chat</module>
         <module>study-netty-spdy</module>
         <module>study-netty-udp</module>
+        <module>study-netty-httproxy</module>
+        <module>study-netty-rp</module>
     </modules>
 
     <dependencyManagement>
@@ -26,6 +28,10 @@
         <dependency>
             <groupId>shibo.study</groupId>
             <artifactId>study-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
         </dependency>
     </dependencies>
 

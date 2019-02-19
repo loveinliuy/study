@@ -12,11 +12,6 @@
     <artifactId>study-netty-spdy</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-        </dependency>
-
     </dependencies>
 
 </project>
