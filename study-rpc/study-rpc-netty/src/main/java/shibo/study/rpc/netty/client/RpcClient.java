@@ -8,6 +8,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import lombok.extern.slf4j.Slf4j;
+import shibo.study.rpc.api.Referer;
 import shibo.study.rpc.netty.RpcRequest;
 import shibo.study.rpc.netty.RpcResponse;
 import shibo.study.rpc.netty.codec.MessageDecoder;
@@ -19,7 +20,7 @@ import java.util.UUID;
  * @author zhangshibo
  */
 @Slf4j
-public class RpcClient {
+public class RpcClient implements Referer {
 
     private final ClientConfig config;
 
@@ -48,6 +49,7 @@ public class RpcClient {
         this.channel = f.channel();
     }
 
+    @Override
     public <T> T refer(Class<T> serviceInterface) {
         return config.getProxyFactory().getProxy(serviceInterface, (proxy, method, args) ->
                 invoke0(method.getDeclaringClass().getName(), method.getName(),

@@ -1,4 +1,4 @@
-package shibo.study.rpc.netty.service;
+package shibo.study.rpc.test.service;
 
 /**
  * @author zhangshibo

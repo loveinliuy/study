@@ -27,6 +27,17 @@
             </dependency>
             <dependency>
                 <groupId>shibo.study</groupId>
+                <artifactId>study-rpc-simple</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-rpc-netty</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>shibo.study</groupId>
                 <artifactId>study-serialization</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>

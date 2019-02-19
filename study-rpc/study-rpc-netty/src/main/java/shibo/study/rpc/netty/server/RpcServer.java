@@ -8,6 +8,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import lombok.extern.slf4j.Slf4j;
+import shibo.study.rpc.api.Exporter;
 import shibo.study.rpc.netty.RpcRequest;
 import shibo.study.rpc.netty.RpcResponse;
 import shibo.study.rpc.netty.codec.MessageDecoder;
@@ -17,7 +18,7 @@ import shibo.study.rpc.netty.codec.MessageEncoder;
  * @author zhangshibo
  */
 @Slf4j
-public class RpcServer {
+public class RpcServer implements Exporter {
 
     private final ServerConfig config;
     private final EventLoopGroup parent = new NioEventLoopGroup();
@@ -48,6 +49,7 @@ public class RpcServer {
         channel = f.channel();
     }
 
+    @Override
     public void export(Object service) {
         RpcServiceRegistration.register(service);
     }

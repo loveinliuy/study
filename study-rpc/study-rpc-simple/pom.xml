@@ -11,5 +11,11 @@
 
     <artifactId>study-rpc-simple</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>shibo.study</groupId>
+            <artifactId>study-rpc-api</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
