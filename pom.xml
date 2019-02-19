@@ -30,6 +30,7 @@
         <lombok.version>1.18.4</lombok.version>
         <netty.version>4.1.31.Final</netty.version>
         <objenesis.version>2.6</objenesis.version>
+        <okhttp.version>3.7.0</okhttp.version>
         <protostuff.version>1.5.9</protostuff.version>
         <!-- test -->
         <junit.version>4.12</junit.version>
@@ -137,6 +138,11 @@
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
             </dependency>
 
             <dependency>
