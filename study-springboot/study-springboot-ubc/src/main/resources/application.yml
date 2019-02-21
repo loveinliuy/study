@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+ubc:
+  rp:
+    port: 1234
+    proxy-host: 172.18.11.150
+    proxy-port: 8080

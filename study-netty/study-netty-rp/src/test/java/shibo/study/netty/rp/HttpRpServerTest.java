@@ -10,7 +10,7 @@ import shibo.study.netty.rp.intercept.ScriptHttpResponseInterceptor;
 public class HttpRpServerTest {
 
     public static void main(String[] args) {
-        String scriptSrc = "";
+        String scriptSrc = "if(window.console){console.log('insert script')}";
         ProxyConfig proxyConfig = ProxyConfig.builder()
                 .host("172.18.11.150")
                 .port(8080)

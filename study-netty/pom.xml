@@ -22,6 +22,43 @@
     </modules>
 
     <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-netty-echo</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-netty-websocket</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-netty-websocket-chat</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-netty-spdy</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-netty-udp</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-netty-httproxy</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>shibo.study</groupId>
+                <artifactId>study-netty-rp</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
     <dependencies>

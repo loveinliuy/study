@@ -9,11 +9,15 @@ import shibo.study.netty.rp.config.ServerConfig;
 public class TransparentRpServerTest {
 
     public static void main(String[] args) {
+        ProxyConfig proxyConfig = ProxyConfig.builder()
+                .host("172.18.11.150")
+                .port(8080)
+                .build();
         ServerConfig config = ServerConfig.builder()
                 .parentGroupThreads(1)
                 .childGroupThreads(0)
                 .port(1234)
-                .proxy(new ProxyConfig("172.18.11.150", 8080))
+                .proxy(proxyConfig)
                 .build();
         TransparentRpServer server = new TransparentRpServer(config);
         server.start();

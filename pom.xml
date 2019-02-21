@@ -14,6 +14,7 @@
         <module>study-serialization</module>
         <module>study-netty</module>
         <module>study-rpc</module>
+        <module>study-springboot</module>
     </modules>
 
     <properties>
@@ -32,6 +33,7 @@
         <objenesis.version>2.6</objenesis.version>
         <okhttp.version>3.7.0</okhttp.version>
         <protostuff.version>1.5.9</protostuff.version>
+        <springboot.version>2.1.3.RELEASE</springboot.version>
         <!-- test -->
         <junit.version>4.12</junit.version>
     </properties>

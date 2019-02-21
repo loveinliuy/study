@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>study-netty-rp</artifactId>
-    <name>Netty Reverse Proxy</name>
+    <description>Netty Reverse Proxy</description>
 
     <dependencies>
         <dependency>
