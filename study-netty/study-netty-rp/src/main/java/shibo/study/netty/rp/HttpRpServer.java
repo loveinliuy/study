@@ -5,21 +5,17 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpServerCodec;
 import io.netty.handler.logging.LoggingHandler;
-import lombok.extern.slf4j.Slf4j;
 import shibo.study.netty.rp.config.ServerConfig;
-import shibo.study.netty.rp.handler.TransparentFrontendHandler;
+import shibo.study.netty.rp.handler.HttpFrontendHandler;
 
 /**
  * @author zhangshibo
  */
-@Slf4j
-public class TransparentRpServer extends AbstractRpServer {
+public class HttpRpServer extends AbstractRpServer {
 
-
-    public TransparentRpServer(ServerConfig config) {
+    public HttpRpServer(ServerConfig config) {
         super(config);
     }
-
 
     @Override
     protected ChannelHandler createChildChannelHandler(ServerConfig config) {
@@ -29,7 +25,7 @@ public class TransparentRpServer extends AbstractRpServer {
                 ch.pipeline()
                         .addLast(new LoggingHandler())
                         .addLast(new HttpServerCodec())
-                        .addLast(new TransparentFrontendHandler(config.getProxy()));
+                        .addLast(new HttpFrontendHandler(config.getProxy()));
             }
         };
     }

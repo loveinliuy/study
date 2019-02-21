@@ -24,8 +24,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ConcurrentTest4RpServer {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        ExecutorService service = new ThreadPoolExecutor(100, 100, 100, TimeUnit.MINUTES,
-                new ArrayBlockingQueue<>(2000), new ThreadFactory() {
+        ExecutorService service = new ThreadPoolExecutor(150, 150, 100, TimeUnit.MINUTES,
+                new ArrayBlockingQueue<>(20000), new ThreadFactory() {
             private AtomicInteger i = new AtomicInteger();
 
             @Override
@@ -38,18 +38,19 @@ public class ConcurrentTest4RpServer {
         Runnable r = () -> {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url("http://localhost:1234/hynw/")
+                    .url("http://172.18.11.150:8080/")
+//                    .url("http://localhost:1234/")
                     .build();
             try (Response response = client.newCall(request).execute()) {
                 log.debug("response: {}", response.isSuccessful());
                 count.incrementAndGet();
             } catch (IOException e) {
-                log.error(e.getMessage(), e);
+                log.error("count: {}", count.get());
             }
         };
 
         List<Future> list = new LinkedList<>();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 5000; i++) {
             Future f = service.submit(r);
             list.add(f);
         }
