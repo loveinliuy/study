@@ -11,5 +11,7 @@
 
     <artifactId>study-netty-httproxy</artifactId>
 
+    <description>A http proxy build through netty.</description>
+
 
 </project>
